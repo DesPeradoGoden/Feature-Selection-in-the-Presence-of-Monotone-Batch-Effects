@@ -9,3 +9,10 @@ Batch effect can be formalized as the changes in the distribution of datasets oc
 We assume the predictor x<sup>*</sup> without batch effects follows a multi-variate Gaussian distribution N(μ, Σ) with the zero mean and an unknown covariance matrix. Therefore, we can formulate the batch effect removal problem as finding the optimal transformation and the covariance matrix Σ such that the total difference of transformed distributions and the underlying normal distribution is minimized. Each  transformation is modeled by a two-layers neural network. We add a negativity constraint on the weights of the neural networks to make sure the corresponding transformations are monotone. As mentioned earlier, such a formulation does not consider the bijective constraint on the transformations. To avoid spurious solutions, we unify the feature selection (Lasso regression) and the batch effect removal task into the following optimization problem:
 ![alt text](https://github.com/DesPeradoGoden/Feature-Selection-in-the-Presence-of-Monotone-Batch-Effects/blob/main/MMD.png?raw=true)
 
+## Result on the Synthetic Data
+F1 score measrure the harmonic mean of recall and precision. We can observe that minimizing the above objective function leads to higher F1 score.
+![alt text](https://github.com/DesPeradoGoden/Feature-Selection-in-the-Presence-of-Monotone-Batch-Effects/blob/main/Figure_5.png?raw=true)
+
+Further, as we see in the heatmaps, the MMD distance between batches are reduced to less than 0.1 after the transformation, while before that it is around between 1 and 2.
+![alt text](https://github.com/DesPeradoGoden/Feature-Selection-in-the-Presence-of-Monotone-Batch-Effects/blob/main/Figure_2.png?raw=true)
+![alt text](https://github.com/DesPeradoGoden/Feature-Selection-in-the-Presence-of-Monotone-Batch-Effects/blob/main/Figure_3.png?raw=true)
