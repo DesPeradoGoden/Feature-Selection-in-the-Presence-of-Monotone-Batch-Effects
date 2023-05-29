@@ -13,6 +13,6 @@ We assume the predictor x<sup>*</sup> without batch effects follows a multi-vari
 F1 score measrure the harmonic mean of recall and precision. We observe that minimizing the above objective function leads to higher F1 score.
 ![alt text](https://github.com/DesPeradoGoden/Feature-Selection-in-the-Presence-of-Monotone-Batch-Effects/blob/main/Figure_5.png?raw=true)
 
-Further, as we see in the heatmaps, the MMD distance between batches are reduced to less than 0.1 after the transformation, while before that it is around between 1 and 2.
+Further, The MMD distance between batches are reduced to less than 0.1 after the transformation, while before that it is between 1 and 2.
 ![alt text](https://github.com/DesPeradoGoden/Feature-Selection-in-the-Presence-of-Monotone-Batch-Effects/blob/main/Figure_2.png?raw=true)
 ![alt text](https://github.com/DesPeradoGoden/Feature-Selection-in-the-Presence-of-Monotone-Batch-Effects/blob/main/Figure_3.png?raw=true)
